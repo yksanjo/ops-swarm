@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ops-swarm"
+version = "0.1.0"
+description = "Incident response swarm planner for ops agents"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+ops-swarm = "ops_swarm.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
